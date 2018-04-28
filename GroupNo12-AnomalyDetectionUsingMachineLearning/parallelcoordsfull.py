@@ -3,7 +3,7 @@ import plotly.graph_objs as go
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv("C:/Users/papibono/Desktop/BE_PROJECT/clusters.csv")
+df = pd.read_csv("clusters.csv")
 df['SourceName']=df['SourceName'].astype('category')
 df['TaskCategory']=df['TaskCategory'].astype('category')
 abc=df.select_dtypes(['category']).columns
