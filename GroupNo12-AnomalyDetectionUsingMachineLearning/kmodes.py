@@ -522,9 +522,9 @@ class KModes(BaseEstimator, ClusterMixin):
 
 
 
-syms = np.genfromtxt('C:/Users/papibono/Desktop/BE_PROJECT/1521029641_1296.csv', dtype=str, delimiter=',',skip_header=1)[:, 0]
-X = np.genfromtxt('C:/Users/papibono/Desktop/BE_PROJECT/1521029641_1296.csv', dtype=object, delimiter=',',skip_header=1)[:, 1:]
-df=pd.read_csv('C:/Users/papibono/Desktop/BE_PROJECT/1521029641_1296.csv',header=0)
+syms = np.genfromtxt('1521029641_1296.csv', dtype=str, delimiter=',',skip_header=1)[:, 0]
+X = np.genfromtxt('1521029641_1296.csv', dtype=object, delimiter=',',skip_header=1)[:, 1:]
+df=pd.read_csv('1521029641_1296.csv',header=0)
 #kproto = KPrototypes(n_clusters=2, init='Cao', verbose=2)
 #clusters = kproto.fit_predict(X, categorical=[0,1])
 kmode=KModes(n_clusters=2, init='Cao', verbose=2)
@@ -543,4 +543,4 @@ df['TaskCategory']=df['TaskCategory'].astype('category')
 abc=df.select_dtypes(['category']).columns
 df[abc] = df[abc].apply(lambda x: x.cat.codes)
 df['cluster']=pd.Series(clusters,index=df.index)
-df.to_csv(r'C:/Users/papibono/Desktop/BE_PROJECT/with_clusters.csv', index=None, sep=',', mode='a')
+df.to_csv(r'with_clusters.csv', index=None, sep=',', mode='a')
