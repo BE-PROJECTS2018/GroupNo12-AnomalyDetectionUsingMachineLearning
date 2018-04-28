@@ -3,7 +3,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df=pd.read_csv('C:/Users/papibono/Desktop/BE_PROJECT/clusters.csv',header=0)
+df=pd.read_csv('clusters.csv',header=0)
+"""
+Remove # to get the desired graph
+"""
+
 #sns.stripplot(x="RecordNumber", y="SourceName",hue="cluster",data=df,jitter=True);
 #sns.stripplot(x="RecordNumber", y="TaskCategory",hue="cluster",data=df,jitter=True);
 #sns.stripplot(x="RecordNumber", y="EventCode",hue="cluster",data=df,jitter=True);
